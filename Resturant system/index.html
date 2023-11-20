@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Restaurant System</title>
+</head>
+<body>
+<div class="container-fluid p-0 position-relative">
+    <div class="bgIMg"></div>
+    <div class="mainContent">
+    <div style="text-align: center;">
+        <h1 style="font-size: 50px;">My System Management</h1>
+    </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div style="text-align: center;"><label for="tableNum">Enter Table Number</label>
+            <br>
+            <input type="number" id="tableNum">
+            <br>
+            <br>
+            <label for="costInput">Enter Table cost</label>
+            <br>
+            <input type="number" id="costInput"></div>
+        <br>
+        <br>
+        <br>
+        <div style="text-align: center;">
+            <button id="submitInput" ><a href="#theadResult">Submit</a></button>
+        </div>
+    </div>
+</div>
+<div id="theadResult" class="container m-3 m-auto mt-5">
+    <table  class="table table-bordered table-warning">
+        <thead>
+          <tr>
+            <th scope="col">#Table Num</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Time</th>
+          </tr>
+        </thead>
+        <tbody id="tbodyResult">
+        </tbody>
+      </table>
+      <div style="text-align: center;"><button id="daily" style="text-align:center;">Show Daily Info</button></div>
+</div>
+    <script src="js/jquary.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

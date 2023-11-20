@@ -1,0 +1,57 @@
+.mainContent{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+label{
+    font-size: 20px;
+    font-weight: 500;
+}
+input{
+    border: 2px solid beige;
+    border-radius:5px;
+    font-size: 25px;
+}
+button {
+    background-color: beige;
+    border: 2px solid bisque;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+button a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+#theadResult{
+    display: none;
+}
+.bgIMg{
+    animation: animate 10s infinite ;
+    
+    background-image: url("../images/1.jpg");
+    height: 100vh;
+    background-position: center ;
+    background-size: cover;
+    opacity: 0.5;
+}
+@keyframes animate{
+    0%{background-image: url(../images/1.jpg);}
+    25%{
+        background-image: url(../images/alexandru-stavrica-170390-800x760.jpg);
+    }
+    50%{
+        background-image: url(../images/full-2-800x640.jpg);
+    }75%{
+        background-image: url(../images/1.jpg);
+
+    }
+    100%{
+        background-image: url(../images/alexandru-stavrica-170390-800x760.jpg);
+
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <title>Daily Page</title>
+</head>
+
+<body>
+    <div id="theadResult" class="container m-3 m-auto mt-5">
+        <table class="table table-bordered table-warning text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Day</th>
+                    <th scope="col">Total Cost</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyResult"></tbody>
+        </table>
+    </div>
+    <div style="text-align: center">
+        <button style="
+          background-color: beige;
+          border: 2px solid bisque;
+          border-radius: 5px;
+          padding: 5px;
+          font-size: 20px;
+          font-weight: 500;
+        ">
+            <a style="
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            font-weight: 500;
+          " href="index.html">Back</a>
+        </button>
+    </div>
+    <!-- Js -->
+    <script>
+        let showResultBody = document.getElementById("tbodyResult");
+        let dailyArr = [];
+        if (JSON.parse(localStorage.getItem("Daily details")) != null) {
+            dailyArr = JSON.parse(localStorage.getItem("Daily details"));
+            showResult();
+        }
+        {
+            dailyArr = [];
+        }
+        console.log(dailyArr);
+        function showResult() {
+            let list = "";
+            for (let i = 0; i < dailyArr.length; i++) {
+                list += `<tr>
+                <td >${dailyArr[i].dateOfEveryDay}</td>
+                <td >${dailyArr[i].totalCost}</td>
+                </tr>
+                `;
+            }
+            showResultBody.innerHTML = list;
+        }
+    </script>
+</body>
+
+</html>

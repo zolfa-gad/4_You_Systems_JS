@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLIP CARD GAME</title>
+    <!-- jQuery 1.8 or later, 33 KB -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <!-- jQuery 1.8 or later, 33 KB -->
+    <!-- <link rel="stylesheet" href="sweetalert2.min.css" /> -->
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- my style  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <div class="control-buttons">
+        <span>Start Game</span>
+      </div>
+      <p id="multipleStrings"></p>
+            <div
+        class="info_container container m-3 d-flex justify-content-between align-items-center border border-3 border-primary align-self-center fs-1 fw-bolder p-4 w-75"
+      >
+        <div class="name">Hello: <span></span></div>
+        <div class="timer">
+          <span>0</span>
+        </div>
+        <div class="errors">Wrong tries: <span>0</span></div>
+      </div>
+
+      <section class="container">
+        <div
+          class="game d-flex flex-wrap justify-content-center align-items-center my-2 col-sm-12"
+        >
+          <!-- card 1 -->
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card1"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-solid fa-house fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card1"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-solid fa-house fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card2"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-brands fa-facebook fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card2"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-brands fa-facebook fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card3"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-brands fa-twitter fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card3"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-brands fa-twitter fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <!-- card 4 -->
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card4"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-solid fa-hashtag fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card4"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-solid fa-hashtag fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <!-- card 5 -->
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card5"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-brands fa-youtube fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card5"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-brands fa-youtube fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <!-- card 6 -->
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card6"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-brands fa-instagram fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card6"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-brands fa-instagram fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <!-- card 7 -->
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card7"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-brands fa-linkedin fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card7"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-brands fa-linkedin fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <!-- card 8 -->
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card8"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-brands fa-github fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card8"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-brands fa-github fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <!-- card 9 -->
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card9"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-brands fa-apple fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card9"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-brands fa-apple fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <!-- card 10 -->
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card10"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-brands fa-whatsapp fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="m-3 border border-5 border-primary card col-lg-4 col-md-3"
+            dataGame="card10"
+          >
+            <div class="text-center">
+              <div class="face front text-center"></div>
+              <div class="face back text-center w-100 h-100 p-3">
+                <i class="fa-brands fa-whatsapp fa-10x text-info"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="modal" class="app-modal hideModal p-2">
+        <div
+          class="modal__box h-100 d-flex justify-content-center align-items-center flex-column gap-2 text-light"
+        >
+          <!-- <div >
+            <img id="gameOverImg" src="./game-over.gif" >
+          </div> -->
+          <div
+            id="modalChild"
+            class="p-5  bg-white text-dark shadow-lg rounded-5 d-flex flex-column align-items-center justify-content-center"
+          >
+            <div class="modal__content text-center">
+              <h2 id="modalHeading" class="fw-bolder fs-1"><span></span></h2>
+              <p id="modalTime" class="fs-4">Time: <span></span></p>
+              <p id="modalTries" class="fs-4">Wrong tries: <span></span></p>
+            </div>
+            <div class="modal__btns">
+              <button
+                class="btn btn-outline-success p-3 fs-2 m-2"
+                onclick="playAgain()"
+              >
+                Play Again
+              </button>
+
+              <button
+                class="btn btn-outline-secondary p-3 fs-2 m-2"
+                onclick="location.replace('../../01.html')"
+              >
+                Go Home
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="p-2 fs-3 fw-bold align-self-start m-4"
+        >press escape to go to <span class="text-danger">Home</span></span
+      >
+    </div>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+
+    <!-- <script src="sweetalert2.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.29.2/sweetalert2.all.js"></script>
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

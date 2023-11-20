@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="tablefonts/icomoon/style.css" />
+
+    <link rel="stylesheet" href="tablecss/owl.carousel.min.css" />
+    <!-- font awsome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="tablecss/bootstrap.min.css" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="tablecss/style.css" />
+
+    <title>Table #6</title>
+  </head>
+  <body class="px-5 d-flex flex-column gap-5 align-items-center">
+    <button onclick="returnToLogin()" class="bg-dark text-white mt-2 rounded-pill p-2">Log Out</button>
+    <div class="table-responsive w-75 mt-5 mb-3 mx-auto">
+      <table class="table m-0 table-striped custom-table">
+        <thead>
+          <tr>
+            <th scope="col">#id</th>
+            <th scope="col">Email</th>
+            <th scope="col">Gpa</th>
+            <th scope="col">GRADE</th>
+          </tr>
+        </thead>
+        <tbody id="studentBody"></tbody>
+      </table>
+    </div>
+    <a class="show bg-dark  text-white  m-auto p-3 rounded-pill mt-2  " id="show_" href="#content">Add New Subjects</a>
+    <div class=".contentTwo m-auto mt-2 pb-0" id="result">
+      <div class="container mb-2">
+        <h2 class="StudentId mt-2 " id="studentIdResult"></h2>
+        <div class="table-responsive">
+          <table class="table m-0 table-striped custom-table ">
+            <thead>
+              <tr class="bg-dark ">
+                <th class="text-white" scope="col">#Code</th>
+                <th class="text-white" scope="col">Subject</th>
+                <th class="text-white" scope="col">Hours</th>
+                <th class="text-white" scope="col">Grade</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyResult"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="content pb-0 mb-3" >
+      <div class="container" id="content">
+        <h2 class="StudentId" id="studentId"></h2>
+        <div class="table-responsive">
+          <table class="table m-0 table-striped custom-table">
+            <thead>
+              <tr>
+                <th scope="col">#Code</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Hours</th>
+                <th scope="col">ADD</th>
+                <th scope="col">DELETE</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <script src="tablejs/jquery-3.3.1.min.js"></script>
+    <script src="tablejs/popper.min.js"></script>
+    <script src="tablejs/bootstrap.min.js"></script>
+    <script src="tablejs/main.js"></script>
+
+  </body>
+</html>
